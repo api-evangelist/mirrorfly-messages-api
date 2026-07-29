@@ -1,0 +1,57 @@
+name: MirrorFly Messages API
+description: >-
+  Self-hosted CPaaS by CONTUS TECH providing REST/HTTP Chat Platform APIs and SDKs for chat, messaging, voice, video,
+  and SIP/VoIP, plus AI agent and contact-center tooling. Deployable as cloud or on-premise.
+url: https://mirrorfly-messages-api.apievangelist.com/apis.yml
+created: '2026-07-29'
+modified: '2026-07-29'
+specificationVersion: '0.21'
+tags:
+  - CPaaS
+  - Communications
+  - Chat / Messaging API
+  - Voice API
+  - Video API
+  - SIP/VoIP
+  - Real-time Communication
+  - SDK
+  - Self-hosted / On-premise
+  - AI Agents / Chatbots
+  - Contact Center
+apis:
+  - name: MirrorFly Chat Platform API
+    description: >-
+      REST/HTTP API for chat and messaging (User and Admin APIs) with JSON payloads. Production base URL is
+      tenant-specific; a public preprod sandbox is available for testing. Auth via username/password to mint a 1-hour
+      bearer token.
+    humanURL: https://www.mirrorfly.com/docs/platformapi/overview/
+    baseURL: https://api-preprod-sandbox.mirrorfly.com/api/v1/
+    tags:
+      - CPaaS
+      - Communications
+      - Chat / Messaging API
+      - Voice API
+      - Video API
+      - SIP/VoIP
+      - Real-time Communication
+      - SDK
+      - Self-hosted / On-premise
+      - AI Agents / Chatbots
+      - Contact Center
+    properties:
+      - type: Documentation
+        url: https://www.mirrorfly.com/docs/platformapi/overview/
+      - type: Documentation
+        url: https://www.mirrorfly.com/docs/platformapi/adminapis/get-started/
+      - type: Documentation
+        url: https://www.mirrorfly.com/docs/chat/overview/
+      - type: LLMSTxt
+        url: https://www.mirrorfly.com/llms.txt
+maintainers:
+  - FN: MirrorFly Messages API
+    url: https://www.mirrorfly.com/
+generated:
+  by: apis.io/add
+  model: claude-opus-4-8
+  confidence: 80
+  at: '2026-07-29T17:37:56.583Z'
