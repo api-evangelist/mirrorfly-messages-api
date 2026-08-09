@@ -1,0 +1,40 @@
+generated: '2026-08-09'
+method: searched
+source: >-
+  https://www.mirrorfly.com/docs/platformapi/ — the "Error" section published on each
+  reference page (Login, Get Started, Users List, Send a message), read 2026-08-09
+format: custom
+rfc9457: false
+note: >-
+  MirrorFly publishes no consolidated error reference and no error-code registry. Each
+  reference page repeats the same two-field envelope with the HTTP status echoed in the
+  body. The errors below are the ones the documentation actually shows; there is no
+  published enumeration of `message` values, so none are invented here.
+envelope:
+  shape: '{ "status": <int>, "message": <string> }'
+  fields:
+    status: integer, mirrors the HTTP status
+    message: human-readable string, not a stable machine-readable code
+  machine_readable_code: false
+problems:
+  - status: 400
+    title: Bad Request
+    detail_field: message
+    description: >-
+      Returned for a malformed or invalid request. The docs render it as
+      '{ "status": 400, "message": "Error Message" }' — the message text is not enumerated.
+    source: https://www.mirrorfly.com/docs/platformapi/userapis/getstarted/login/
+  - status: 401
+    title: Token Expired
+    detail_field: message
+    description: >-
+      Returned when the Authorization header is missing or the token has expired. The
+      documented remediation is to call POST /api/v1/login again and retry with the new
+      token; tokens are valid for one hour.
+    remediation: Re-mint the token via POST /api/v1/login and retry.
+    source: https://www.mirrorfly.com/docs/platformapi/userapis/user/users/
+gaps:
+  - No error-code registry (no stable symbolic codes, only free-text messages).
+  - No application/problem+json (RFC 9457) support.
+  - No documented 403 / 404 / 409 / 422 / 429 / 5xx semantics.
+  - No rate-limit (429) error or Retry-After contract.

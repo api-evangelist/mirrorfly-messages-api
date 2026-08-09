@@ -1,11 +1,21 @@
 name: MirrorFly Messages API
 description: >-
-  Self-hosted CPaaS by CONTUS TECH providing REST/HTTP Chat Platform APIs and SDKs for chat, messaging, voice, video,
-  and SIP/VoIP, plus AI agent and contact-center tooling. Deployable as cloud or on-premise.
+  MirrorFly is a self-hosted CPaaS from CONTUS TECH (Chennai, India) that lets teams embed
+  real-time chat, messaging, HD voice, video calling, live streaming, SIP/VoIP and activity
+  feeds into web and mobile applications, deployed either on MirrorFly's cloud or entirely
+  on the customer's own infrastructure. The developer surface has two halves: multi-platform
+  client SDKs and prebuilt UIKits for JavaScript, React, React Native, Angular, Vue, Flutter,
+  Kotlin/Android, Swift/iOS and Objective-C; and a server-side REST Chat Platform API split
+  into User APIs and Admin APIs covering users, contacts, presence, one-to-one and group
+  chat, topics, message history, media, moderation (block/unblock), data migration and data
+  export. Authentication mints a one-hour token from a console-issued username and password.
+  MirrorFly also ships conversational-AI tooling — AI voice agents, chatbots, speech-to-text
+  and an AI contact center — on the same platform.
 url: https://mirrorfly-messages-api.apievangelist.com/apis.yml
 created: '2026-07-29'
-modified: '2026-07-29'
+modified: '2026-08-09'
 specificationVersion: '0.21'
+image: https://www.mirrorfly.com/assets/images/mirrorFly-logo.jpg
 tags:
   - CPaaS
   - Communications
@@ -49,9 +59,93 @@ apis:
         url: https://www.mirrorfly.com/llms.txt
 maintainers:
   - FN: MirrorFly Messages API
+    email: integrations@contus.in
     url: https://www.mirrorfly.com/
 generated:
   by: apis.io/add
   model: claude-opus-4-8
   confidence: 80
   at: '2026-07-29T17:37:56.583Z'
+common:
+- type: DomainSecurity
+  url: security/mirrorfly-messages-api-domain-security.yml
+- type: DeveloperPortal
+  name: MirrorFly Docs
+  url: https://www.mirrorfly.com/docs/
+- type: Documentation
+  name: Chat Platform API documentation
+  url: https://www.mirrorfly.com/docs/platformapi/overview/
+- type: APIReference
+  name: User APIs and Admin APIs reference
+  url: https://www.mirrorfly.com/docs/platformapi/userapis/getstarted/login/
+- type: GettingStarted
+  name: Chat Platform API get started
+  url: https://www.mirrorfly.com/docs/platformapi/adminapis/get-started/
+- type: Support
+  name: Tech Support (MirrorFly console)
+  url: https://console.mirrorfly.com/
+- type: Blog
+  name: MirrorFly Blog
+  url: https://www.mirrorfly.com/blog/
+- type: GitHubOrganization
+  name: MirrorFly on GitHub
+  url: https://github.com/MirrorFly
+- type: Pricing
+  name: MirrorFly pricing
+  url: https://www.mirrorfly.com/pricing.php
+- type: SignUp
+  name: Request MirrorFly API credentials
+  url: https://www.mirrorfly.com/contact-sales.php
+- type: Login
+  name: MirrorFly console
+  url: https://console.mirrorfly.com/
+- type: TermsOfService
+  name: Terms and Conditions
+  url: https://www.mirrorfly.com/terms-and-conditions.php
+- type: PrivacyPolicy
+  name: Privacy Policy
+  url: https://www.mirrorfly.com/privacy-policy.php
+- type: ChangeLog
+  name: Chat Platform API changelog
+  url: https://www.mirrorfly.com/docs/platformapi/api-changelog/
+- type: ChangeLog
+  name: Chat Platform API changelog (captured)
+  url: changelog/mirrorfly-messages-api-changelog.yml
+- type: Authentication
+  name: Authentication profile
+  url: authentication/mirrorfly-messages-api-authentication.yml
+- type: Conventions
+  name: API conventions
+  url: conventions/mirrorfly-messages-api-conventions.yml
+- type: ErrorCatalog
+  name: Error catalog
+  url: errors/mirrorfly-messages-api-error-codes.yml
+- type: Lifecycle
+  name: Lifecycle and versioning
+  url: lifecycle/mirrorfly-messages-api-lifecycle.yml
+- type: Sandbox
+  name: Preprod sandbox environment
+  url: sandbox/mirrorfly-messages-api-sandbox.yml
+- type: Packages
+  name: Published client packages
+  url: packages/mirrorfly-messages-api-packages.yml
+- type: SDKs
+  name: First-party SDKs (Web, React Native, Flutter, iOS)
+  url: packages/mirrorfly-messages-api-packages.yml
+- type: Components
+  name: MirrorFly UIKit components
+  url: components/mirrorfly-messages-api-components.yml
+- type: Conformance
+  name: Standards conformance
+  url: conformance/mirrorfly-messages-api-conformance.yml
+- type: Compliance
+  name: Security and compliance posture (HIPAA, GDPR, SOC 2 Type 2, CCPA — claimed)
+  url: https://www.mirrorfly.com/chat-security.php
+- type: LLMsTxt
+  name: llms.txt (captured verbatim)
+  url: llms/mirrorfly-messages-api-llms.txt
+x-enrichment:
+  date: '2026-08-09'
+  status: enriched
+  artifacts_added: 12
+  pass: local-v1

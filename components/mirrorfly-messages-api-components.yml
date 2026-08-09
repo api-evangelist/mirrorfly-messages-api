@@ -1,0 +1,46 @@
+generated: '2026-08-09'
+method: searched
+source: >-
+  https://www.mirrorfly.com/docs/uikit/overview/, https://www.mirrorfly.com/chat-ui-kit.php,
+  npm registry, github.com/MirrorFly — read 2026-08-09
+summary: >-
+  MirrorFly ships prebuilt client-side chat UI components ("UIKit") separately from its
+  transport SDKs: drop-in conversation, contact and profile surfaces with theme
+  configuration. These are embeddable UI, not server SDKs — the server SDKs are
+  catalogued in packages/.
+families:
+  - name: MirrorFly UIKit
+    description: >-
+      Prebuilt messaging UI components (conversation list, chat view, contacts, profile)
+      with a theme setup layer, intended to be dropped into a host application.
+    docs: https://www.mirrorfly.com/docs/uikit/overview/
+    documented_features: [Theme Setup, Theme, Profile, Contact]
+    platforms:
+      - platform: flutter
+        quick_start: https://www.mirrorfly.com/docs/uikit/flutter/quick-start/
+        repo: https://github.com/MirrorFly/MirrorFly-Flutter-UIKIT
+      - platform: react
+        loader: mirrorfly-uikit
+        registry_url: https://www.npmjs.com/package/mirrorfly-uikit
+      - platform: react-native
+        loader: mirrorfly-uikit-react-native
+        registry_url: https://www.npmjs.com/package/mirrorfly-uikit-react-native
+        sample: https://github.com/MirrorFly/MirrorFlyUIKit-ReactNative-Sample
+      - platform: android
+        repo: https://github.com/MirrorFly/MF-Android-UIKIT-SDK
+      - platform: ios
+        repo: https://github.com/MirrorFly/Mirrorfly-iosuikit-framework
+  - name: Lite Chat SDK App
+    description: >-
+      Lightweight prebuilt chat application shells published per framework as quick-start
+      sample apps rather than as a component library.
+    docs: https://www.mirrorfly.com/docs/chat/overview/
+    platforms:
+      - {platform: android, repo: 'https://github.com/MirrorFly/MirrorFly-Lite-Chat-SDK-App-Android'}
+      - {platform: ios, repo: 'https://github.com/MirrorFly/MirrorFly-Lite-Chat-SDK-App-iOS'}
+      - {platform: react, repo: 'https://github.com/MirrorFly/MirrorFly-Lite-Chat-SDK-App-React'}
+      - {platform: angular, repo: 'https://github.com/MirrorFly/MirrorFly-Lite-Chat-SDK-App-Angular'}
+      - {platform: vuejs, repo: 'https://github.com/MirrorFly/MirrorFly-Lite-Chat-SDK-App-VueJs'}
+notes:
+  - No hosted/embeddable iframe surface or embedded dashboard is documented.
+  - No web-components (custom element) distribution was found; components are framework-native.

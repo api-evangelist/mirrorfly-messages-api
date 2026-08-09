@@ -1,0 +1,64 @@
+generated: '2026-08-09'
+method: searched
+source: >-
+  https://www.mirrorfly.com/docs/platformapi/userapis/getstarted/login/ and
+  https://www.mirrorfly.com/docs/platformapi/adminapis/get-started/
+docs: https://www.mirrorfly.com/docs/platformapi/userapis/getstarted/login/
+note: >-
+  Derived by reading the published docs, not from an OpenAPI — MirrorFly publishes no
+  machine-readable specification. There are two separate credential sets (User API and
+  Admin API), each minting its own token from the same login operation shape.
+summary:
+  types: [http]
+  api_key_in: [header]
+  oauth2_flows: []
+  oauth2: false
+  openid_connect: false
+  mutual_tls: false
+schemes:
+  - name: AuthToken
+    type: http
+    scheme: custom-token
+    in: header
+    parameter_name: Authorization
+    format: >-
+      Opaque token sent as the raw value of the Authorization header (documented as
+      `-H "Authorization: AuthToken"`). The docs show no "Bearer " prefix.
+    token_lifetime: 3600
+    token_lifetime_note: >-
+      "Authentication token received in the response is valid upto 1 hour. You need to
+      call the API once again to generate the new token." A 401 on a secured API is the
+      documented signal to re-mint.
+    sources: [https://www.mirrorfly.com/docs/platformapi/adminapis/get-started/]
+token_endpoint:
+  method: POST
+  path: /api/v1/login
+  url_template: https://{api-base-url}/api/v1/login
+  content_type: application/json
+  request:
+    - {name: username, type: string, required: true, description: Username provided by the admin/console}
+    - {name: password, type: string, required: true, description: Password provided by the admin/console}
+  response_shape: '{ "status": 200, "data": { "token": "..." }, "message": "Data retrieved successfully" }'
+  error_shape: '{ "status": 400, "message": "Error Message" }'
+audiences:
+  - name: User API
+    credentials: username + password for an end user
+    docs: https://www.mirrorfly.com/docs/platformapi/userapis/getstarted/login/
+  - name: Admin API
+    credentials: admin username + password from the MirrorFly console
+    docs: https://www.mirrorfly.com/docs/platformapi/adminapis/get-started/
+credential_issuance:
+  console: https://console.mirrorfly.com/
+  registration: https://www.mirrorfly.com/contact-sales.php
+  gate: >-
+    Credentials are not self-service. The docs route "Register here" to the contact-sales
+    form and state "Registration is subject to verification and would take up to 24 hours."
+    For Eazy plan and paid subscribers, API credentials appear in the console only after
+    the customer supplies their server configuration.
+  base_url: >-
+    Production {api-base-url} is tenant-specific and issued through the console; the
+    public preprod sandbox host is api-preprod-sandbox.mirrorfly.com.
+observations:
+  - No OAuth 2.0, OpenID Connect, mTLS or scoped-permission model is documented.
+  - No API-key rotation, key-prefix, or key-scoping documentation was found.
+  - No /.well-known/openid-configuration or /.well-known/oauth-authorization-server is served.

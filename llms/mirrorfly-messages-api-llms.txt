@@ -1,0 +1,90 @@
+# MirrorFly
+
+> MirrorFly is the #1 self-hosted CPaaS provider to integrate AI agent, chat, video, contact center, VoIP, & Chatbot SDKs into any web & app in just 24 hours.
+
+Key capabilities and important notes:
+
+- Self-hosted and on-premises deployment for complete data control
+- AI-powered agents, chatbots, and conversational AI built-in
+- Enterprise-grade real-time chat, voice, and video APIs
+- Multi-platform SDKs for Web, iOS, Android, and Desktop
+- Contact center and customer service automation capabilities
+- White-label solutions for partners and resellers
+
+## Self-Hosted AI Chat & Calls
+
+- [Chat API Solution](https://www.mirrorfly.com/chat/): Build scalable chat experiences
+- [Video Call Solution](https://www.mirrorfly.com/video-call-solution.php): Video Calling API & SDK
+- [Self-Hosted Chat Solution](https://www.mirrorfly.com/self-hosted-chat-solution.php): On-premises messaging platform
+- [SIP & VoIP Solution](https://www.mirrorfly.com/sip-voip-solution.php): Voice connectivity
+- [Voice Call Solution](https://www.mirrorfly.com/voice-call-solution.php): HQ voice calling
+- [On-Premises Chat Server](https://www.mirrorfly.com/on-premises-chat-server.php): Self-hosted deployment
+- [Activity Feeds](https://www.mirrorfly.com/activity-feeds.php): Custom activity feeds for apps
+- [Live Streaming SDK](https://www.mirrorfly.com/live-streaming-sdk.php): Stream to millions
+- [Enterprise Instant Messaging](https://www.mirrorfly.com/enterprise-instant-messaging-software.php): Enterprise-grade messaging
+
+## Self-Hosted AI Agents
+
+- [Conversational AI](https://www.mirrorfly.com/conversational-ai/): AI-powered agents
+- [Voice Agent](https://www.mirrorfly.com/conversational-ai/voice-agent/): Build AI voice agents
+- [Chatbot](https://www.mirrorfly.com/conversational-ai/chatbot/): Create AI chatbots
+- [Speech-to-Text](https://www.mirrorfly.com/conversational-ai/speech-to-text/): Transcription solution
+- [AI Contact Center](https://www.mirrorfly.com/contact-center-solution.php): Customer service automation
+- [AI Receptionist](https://www.mirrorfly.com/conversational-ai/industries/ai-receptionist/): AI-powered reception
+
+## Development & SDKs
+
+- [Chat SDK](https://www.mirrorfly.com/chat/sdk/): Multi-platform SDKs
+- [Flutter SDK](https://www.mirrorfly.com/chat/sdk/flutter/)
+- [Kotlin SDK](https://www.mirrorfly.com/chat/sdk/kotlin/)
+- [React Native SDK](https://www.mirrorfly.com/chat/sdk/react-native/)
+- [Swift SDK](https://www.mirrorfly.com/chat/sdk/swift/)
+- [Angular SDK](https://www.mirrorfly.com/chat/sdk/angular/)
+- [JavaScript SDK](https://www.mirrorfly.com/chat/sdk/javascript/)
+- [React.js SDK](https://www.mirrorfly.com/chat/sdk/react-js/)
+- [Objective-C SDK](https://www.mirrorfly.com/chat/sdk/objective-c/)
+
+## Use Cases & Solutions
+
+- [Telecom Messaging Solution](https://www.mirrorfly.com/chat/solutions/telecom/)
+- [Banking Messaging Solution](https://www.mirrorfly.com/chat/solutions/banking/)
+- [Social Platforms Messaging](https://www.mirrorfly.com/chat/solutions/social/)
+- [E-commerce In-App Messaging](https://www.mirrorfly.com/chat/solutions/ecommerce/)
+- [Healthcare Messaging Solution](https://www.mirrorfly.com/chat/solutions/digital-healthcare/)
+- [Education Messaging](https://www.mirrorfly.com/chat/solutions/elearning/)
+- [Fitness Chat SDK](https://www.mirrorfly.com/chat/solutions/fitness/)
+- [Transportation Chat SDK](https://www.mirrorfly.com/chat/solutions/transportation/)
+- [Gaming Real-Time Chat](https://www.mirrorfly.com/chat/solutions/gaming/)
+- [Super App Development](https://www.mirrorfly.com/super-app-development.php)
+- [Multi-Tenant SaaS Chat](https://www.mirrorfly.com/multi-tenant-chat-for-saas.php)
+- [Online Consultation Software](https://www.mirrorfly.com/conversational-ai/online-consultation-software/)
+
+## Advanced Features
+
+- [Build Chat Platform](https://www.mirrorfly.com/build-chat-platform.php)
+- [Build Video Chat App](https://www.mirrorfly.com/build-video-chat-app.php)
+- [WebRTC Video Chat](https://www.mirrorfly.com/webrtc-video-chat.php)
+- [Video KYC API](https://www.mirrorfly.com/video-kyc-api.php)
+- [HIPAA Compliant Chat API](https://www.mirrorfly.com/hipaa-compliant-chat-api.php)
+- [FlutterFlow Chat Solution](https://www.mirrorfly.com/flutterflow-chat-solution.php)
+- [Instant Messaging App Development](https://www.mirrorfly.com/instant-messaging-app-development.php)
+- [Chat Features](https://www.mirrorfly.com/chat-features.php)
+- [Chat Security](https://www.mirrorfly.com/chat-security.php)
+- [Chat UI Kit](https://www.mirrorfly.com/chat-ui-kit.php)
+
+## Resources
+
+- [Pricing](https://www.mirrorfly.com/pricing.php)
+- [FAQ](https://www.mirrorfly.com/faq.php)
+- [Case Studies](https://www.mirrorfly.com/case-studies/)
+- [Tutorials](https://www.mirrorfly.com/tutorials/)
+- [Learning Articles](https://www.mirrorfly.com/learn/)
+- [Alternatives](https://www.mirrorfly.com/alternatives/)
+
+## Optional
+
+- [Contact Sales](https://www.mirrorfly.com/contact-sales.php)
+- [Request Demo](https://www.mirrorfly.com/request-demo.php)
+- [Terms and Conditions](https://www.mirrorfly.com/terms-and-conditions.php)
+- [Privacy Policy](https://www.mirrorfly.com/privacy-policy.php)
+- [Refund & Cancellation Policy](https://www.mirrorfly.com/refund-cancellation-policy.php)

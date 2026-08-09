@@ -1,0 +1,49 @@
+generated: '2026-08-09'
+method: probed
+source: live GET probes, 2026-08-09
+summary: >-
+  No /.well-known/ discovery documents are served by MirrorFly. The API host
+  (api-preprod-sandbox.mirrorfly.com) is a Spring Boot service that returns a real
+  JSON 404 for every /.well-known/ path. The marketing host (www.mirrorfly.com) and
+  the console SPA (console.mirrorfly.com) both answer HTTP 200 with their standard
+  HTML page for EVERY path, including a deliberately nonsense control path — these
+  are soft-404s and are recorded as such, not as hits.
+hosts:
+  - host: https://api-preprod-sandbox.mirrorfly.com
+    behavior: json-404
+    documents:
+      - {path: /.well-known/security.txt, status: 404}
+      - {path: /.well-known/openid-configuration, status: 404}
+      - {path: /.well-known/oauth-authorization-server, status: 404}
+      - {path: /.well-known/api-catalog, status: 404}
+      - {path: /.well-known/ai-plugin.json, status: 404}
+      - {path: /.well-known/agent-card.json, status: 404}
+      - {path: /.well-known/agent.json, status: 404}
+  - host: https://www.mirrorfly.com
+    behavior: soft-404
+    control_probe:
+      path: /.well-known/THIS-SHOULD-404-xyz
+      status: 200
+      content_type: text/html
+      bytes: 381212
+      note: identical body returned for every probed path
+    documents:
+      - {path: /.well-known/security.txt, status: 200, verdict: soft-404-html}
+      - {path: /security.txt, status: 200, verdict: soft-404-html}
+      - {path: /.well-known/openid-configuration, status: 200, verdict: soft-404-html}
+      - {path: /.well-known/api-catalog, status: 200, verdict: soft-404-html}
+      - {path: /.well-known/ai-plugin.json, status: 200, verdict: soft-404-html}
+      - {path: /.well-known/agent-card.json, status: 200, verdict: soft-404-html}
+      - {path: /.well-known/agent.json, status: 200, verdict: soft-404-html}
+  - host: https://console.mirrorfly.com
+    behavior: soft-404
+    control_probe:
+      path: /.well-known/THIS-SHOULD-404-xyz
+      status: 200
+      content_type: text/html
+      bytes: 9368
+      note: SPA shell returned for every path
+    documents:
+      - {path: /.well-known/security.txt, status: 200, verdict: soft-404-html}
+      - {path: /.well-known/agent-card.json, status: 200, verdict: soft-404-html}
+documents_found: 0

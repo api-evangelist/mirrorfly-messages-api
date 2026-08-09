@@ -1,0 +1,96 @@
+generated: '2026-08-09'
+method: searched
+source: >-
+  https://www.mirrorfly.com/docs/platformapi/ (Get Started, Login, Users List,
+  Send a message, Chat history reference pages), read 2026-08-09
+note: >-
+  Captured from the human documentation. MirrorFly publishes no OpenAPI, so nothing here
+  is derived from a spec; every value below appears verbatim in a published reference page.
+protocol:
+  style: REST-ish over HTTP
+  statement: >-
+    "The Chat API uses standard HTTP protocols where JSON payloads are returned in
+    response to the HTTP requests. It is internally implemented based on the RESTful
+    principles."
+  base_url_template: https://{api-base-url}/api/v1/
+  sandbox_host: https://api-preprod-sandbox.mirrorfly.com/api/v1/
+authentication:
+  style: opaque token in Authorization header
+  header: 'Authorization: <token>'
+  mint: POST /api/v1/login
+  ttl_seconds: 3600
+  reauth_signal: HTTP 401 on a secured operation
+  see: authentication/mirrorfly-messages-api-authentication.yml
+content_types:
+  request:
+    - application/json          # login
+    - application/x-www-form-urlencoded  # e.g. chat/sendmessage
+    - multipart/form-data       # media upload on chat/sendmessage (file param)
+  response:
+    - application/json
+  note: >-
+    Content type is not uniform across the surface — login takes JSON while
+    chat/sendmessage is documented as form-urlencoded with a file part.
+response_envelope:
+  shape: '{ "status": <int>, "data": <object>, "message": <string> }'
+  fields:
+    status: HTTP-style integer status echoed inside the body
+    data: operation payload (absent on errors)
+    message: human-readable message, e.g. "Data retrieved successfully"
+  note: The HTTP status code is mirrored into the body rather than the body being a bare resource.
+error_envelope:
+  shape: '{ "status": <int>, "message": <string> }'
+  rfc9457: false
+  problem_json: false
+  error_code_registry: false
+  see: errors/mirrorfly-messages-api-error-codes.yml
+pagination:
+  style: page-number
+  request_params:
+    - {name: page, type: number, required: false, default: 1, description: Page number to fetch}
+    - {name: size, type: number, required: false, default: 50, description: Records per page}
+  response_fields:
+    - totalPages
+    - totalRecords
+  evidence: https://www.mirrorfly.com/docs/platformapi/userapis/user/users/
+idempotency:
+  supported: false
+  note: >-
+    No Idempotency-Key header, request-id de-duplication, or retry-safety contract is
+    documented anywhere in the Chat Platform API reference. Recorded as absent — no
+    Idempotency pointer is emitted for this provider.
+filtering_and_search:
+  - {param: name, applies_to: users/userList, description: username search}
+  - {param: metadataKey, applies_to: users/userList, description: metadata key to search on}
+  - {param: metadataValues, applies_to: users/userList, description: comma-separated metadata values}
+  - {param: exclude, applies_to: recent chat, description: exclude specific message types}
+  - {param: messageTime, applies_to: recent chat, description: epoch timestamp cursor for chats after a time}
+  - {param: topicId, applies_to: chat operations, description: topic-scoped chat filtering}
+metadata:
+  supported: true
+  shape: 'metaData: { key: value }'
+  note: >-
+    Free-form metadata on users (create/update/get) and up to 3 additional metadata
+    entries on groups; searchable through metadataKey / metadataValues.
+request_tracing:
+  request_id_header: null
+  note: No correlation/request-id header is documented for the public API.
+rate_limiting:
+  documented: false
+  headers: []
+  note: No rate-limit policy or response headers are published.
+versioning:
+  transport: uri-path
+  current: v1
+  api_release_version: 2.1.9
+  note: >-
+    The URL is pinned at /api/v1/ while the documented API release train advances
+    independently (1.0.0 → 2.1.9 in the changelog). The two numbers are not the same axis.
+  see: lifecycle/mirrorfly-messages-api-lifecycle.yml
+events:
+  webhooks: false
+  streaming_api: false
+  note: >-
+    No webhook, callback or event-subscription surface is documented for the Chat
+    Platform API; real-time delivery is handled inside the client SDKs (XMPP/WebRTC),
+    not as a server-to-server event contract.

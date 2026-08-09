@@ -1,0 +1,91 @@
+generated: '2026-08-09'
+method: searched
+source: >-
+  npm registry, pub.dev, CocoaPods trunk, github.com/MirrorFly, and
+  https://www.mirrorfly.com/chat/sdk/
+notes: >-
+  MirrorFly is an SDK-first CPaaS. All packages below are published by CONTUS TECH
+  (npm maintainer "contus", the MirrorFly parent company) or point at mirrorfly.com
+  docs as their homepage, so they are treated as first-party. No Maven Central,
+  NuGet, PyPI, RubyGems, Packagist or crates.io artifacts were found — the Android
+  SDK is distributed from MirrorFly's own docs/artifact hosting rather than Maven
+  Central (searched com.contus + "mirrorfly": 0 results).
+packages:
+  - language: javascript
+    registry: npm
+    name: mirrorfly-sdk
+    version: 7.1.0
+    url: https://www.npmjs.com/package/mirrorfly-sdk
+    install: npm install mirrorfly-sdk
+    description: MirrorFly's Web SDK
+    official: true
+    evidence: npm maintainer "contus"
+  - language: javascript
+    registry: npm
+    name: mirrorfly-reactnative-sdk
+    version: 2.5.1
+    url: https://www.npmjs.com/package/mirrorfly-reactnative-sdk
+    install: npm install mirrorfly-reactnative-sdk
+    description: MirrorFly's React Native SDK
+    official: true
+    evidence: npm maintainer "contus"
+  - language: javascript
+    registry: npm
+    name: mirrorfly-uikit
+    version: 4.1.9
+    url: https://www.npmjs.com/package/mirrorfly-uikit
+    install: npm install mirrorfly-uikit
+    description: React-based UI kit for MirrorFly
+    official: true
+    kind: uikit
+    evidence: npm maintainer "contus"
+  - language: javascript
+    registry: npm
+    name: mirrorfly-uikit-react-native
+    version: 1.4.8
+    url: https://www.npmjs.com/package/mirrorfly-uikit-react-native
+    install: npm install mirrorfly-uikit-react-native
+    description: React Native-based UI kit for MirrorFly
+    official: true
+    kind: uikit
+    evidence: npm maintainer "contus"
+  - language: dart
+    registry: pub.dev
+    name: mirrorfly_plugin
+    version: 1.9.0
+    url: https://pub.dev/packages/mirrorfly_plugin
+    install: flutter pub add mirrorfly_plugin
+    description: MirrorFly Flutter chat plugin
+    official: true
+    evidence: >-
+      pubspec homepage https://www.mirrorfly.com/docs/chat/flutter-plugin/v1/quick-start
+  - language: swift
+    registry: cocoapods
+    name: MirrorFlySDK
+    version: 5.18.25
+    url: https://cocoapods.org/pods/MirrorFlySDK
+    install: pod 'MirrorFlySDK'
+    description: MirrorFly iOS chat/calls SDK
+    official: true
+    evidence: >-
+      103 versions on trunk.cocoapods.org, latest published 2026-05-29
+sample_repositories:
+  org: https://github.com/MirrorFly
+  public_repos: 26
+  examples:
+    - https://github.com/MirrorFly/MirrorFly-ReactNative-Sample
+    - https://github.com/MirrorFly/MirrorFly-Flutter-Sample
+    - https://github.com/MirrorFly/MirrorFly-Android-Sample
+    - https://github.com/MirrorFly/MirrorFly-iOS-Sample
+    - https://github.com/MirrorFly/MirrorFly-React-Sample
+registries_checked:
+  - {registry: npm, result: hit}
+  - {registry: pub.dev, result: hit}
+  - {registry: cocoapods, result: hit}
+  - {registry: maven-central, result: miss}
+  - {registry: pypi, result: miss}
+  - {registry: nuget, result: miss}
+  - {registry: rubygems, result: miss}
+  - {registry: packagist, result: miss}
+  - {registry: crates.io, result: miss}
+  - {registry: pkg.go.dev, result: miss}

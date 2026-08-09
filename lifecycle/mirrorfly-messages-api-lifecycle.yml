@@ -1,0 +1,45 @@
+generated: '2026-08-09'
+method: searched
+source: >-
+  https://www.mirrorfly.com/docs/platformapi/api-changelog/,
+  https://www.mirrorfly.com/docs/platformapi/adminapis/get-started/, plus live probes
+  of status hosts, 2026-08-09
+versioning:
+  scheme: uri-path
+  current: v1
+  api_release_version: 2.1.9
+  docs: https://www.mirrorfly.com/docs/platformapi/api-changelog/
+  note: >-
+    The HTTP surface is pinned at /api/v1/. The changelog advances a separate
+    release-train version (currently 2.1.9); the two are different axes and no mapping
+    between them is published.
+deprecation:
+  policy_url: null
+  policy_documented: false
+  sunset_header: false
+  deprecation_header: false
+  note: >-
+    No deprecation policy, no RFC 8594 Sunset/Deprecation header support, and no
+    end-of-life notice mechanism is published. The changelog records additions only —
+    no entry marks a removal or a breaking change.
+sla:
+  url: null
+  uptime_target: null
+  note: No public SLA or uptime commitment was found; terms are handled per contract.
+status_page:
+  url: null
+  probed:
+    - {url: 'https://status.mirrorfly.com/', status: 0, result: DNS/connection failure}
+    - {url: 'https://mirrorfly.statuspage.io/', status: 200, result: 'redirects to https://www.atlassian.com/software/statuspage — the Statuspage marketing site, not a MirrorFly status page'}
+    - {url: 'https://www.mirrorfly.com/status.php', status: 404, result: not found}
+  note: >-
+    No status page exists. The mirrorfly.statuspage.io subdomain resolves but 302s to
+    Atlassian's product page, so it is NOT evidence of a status page and no StatusPage
+    pointer is emitted.
+deprecated_operations: []
+support_lifecycle:
+  self_hosted: true
+  note: >-
+    MirrorFly is sold as a self-hosted / on-premise CPaaS as well as cloud, so tenants
+    can run pinned server builds; no published support-window matrix for those builds
+    was found.
