@@ -11,7 +11,7 @@ description: >-
   export. Authentication mints a one-hour token from a console-issued username and password.
   MirrorFly also ships conversational-AI tooling — AI voice agents, chatbots, speech-to-text
   and an AI contact center — on the same platform.
-url: https://mirrorfly-messages-api.apievangelist.com/apis.yml
+url: https://raw.githubusercontent.com/api-evangelist/mirrorfly-messages-api/refs/heads/main/apis.yml
 created: '2026-07-29'
 modified: '2026-08-09'
 specificationVersion: '0.21'
