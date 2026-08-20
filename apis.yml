@@ -23,6 +23,18 @@ tags:
   - Voice API
   - Video API
   - SIP/VoIP
+  - Real-Time Communication
+  - SDK
+  - Self-hosted / On-premise
+  - AI Agents / Chatbots
+  - Contact Center
+tags_raw:
+  - CPaaS
+  - Communications
+  - Chat / Messaging API
+  - Voice API
+  - Video API
+  - SIP/VoIP
   - Real-time Communication
   - SDK
   - Self-hosted / On-premise
@@ -37,6 +49,18 @@ apis:
     humanURL: https://www.mirrorfly.com/docs/platformapi/overview/
     baseURL: https://api-preprod-sandbox.mirrorfly.com/api/v1/
     tags:
+      - CPaaS
+      - Communications
+      - Chat / Messaging API
+      - Voice API
+      - Video API
+      - SIP/VoIP
+      - Real-Time Communication
+      - SDK
+      - Self-hosted / On-premise
+      - AI Agents / Chatbots
+      - Contact Center
+    tags_raw:
       - CPaaS
       - Communications
       - Chat / Messaging API
