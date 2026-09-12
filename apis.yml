@@ -116,6 +116,8 @@ generated:
   confidence: 80
   at: '2026-07-29T17:37:56.583Z'
 common:
+- type: Website
+  url: https://www.mirrorfly.com/
 - type: DomainSecurity
   url: security/mirrorfly-messages-api-domain-security.yml
 - type: DeveloperPortal
