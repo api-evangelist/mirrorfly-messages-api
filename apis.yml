@@ -38,7 +38,7 @@ accessModel:
   generated: '2026-09-03'
   method: derived
 created: '2026-07-29'
-modified: '2026-08-09'
+modified: '2026-10-06'
 specificationVersion: '0.23'
 image: https://www.mirrorfly.com/assets/images/mirrorFly-logo.jpg
 tags:
@@ -116,6 +116,8 @@ generated:
   confidence: 80
   at: '2026-07-29T17:37:56.583Z'
 common:
+- url: https://www.mirrorfly.com/blog/feed/
+  type: BlogRSS
 - type: Website
   url: https://www.mirrorfly.com/
 - type: DomainSecurity
