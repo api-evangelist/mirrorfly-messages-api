@@ -1,4 +1,4 @@
-# mirrorfly-messages-api
+# MirrorFly Messages API
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,4 +64,96 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Self-hosted CPaaS by CONTUS TECH providing REST/HTTP Chat Platform APIs and SDKs for chat, messaging, voice, video, and SIP/VoIP, plus AI agent and contact-center tooling. Deployable as cloud or on-premise.
+MirrorFly is a self-hosted CPaaS from CONTUS TECH (Chennai, India) that lets teams embed real-time chat, messaging, HD voice, video calling, live streaming, SIP/VoIP and activity feeds into web and mobile applications, deployed either on MirrorFly's cloud or entirely on the customer's own infrastructure. The developer surface has two halves: multi-platform client SDKs and prebuilt UIKits for JavaScript, React, React Native, Angular, Vue, Flutter, Kotlin/Android, Swift/iOS and Objective-C; and a server-side REST Chat Platform API split into User APIs and Admin APIs covering users, contacts, presence, one-to-one and group chat, topics, message history, media, moderation (block/unblock), data migration and data export. Authentication mints a one-hour token from a console-issued username and password. MirrorFly also ships conversational-AI tooling — AI voice agents, chatbots, speech-to-text and an AI contact center — on the same platform.
+
+**Areas:** CPaaS · Communications · Chat / Messaging API · Voice API · Video API · SIP/VoIP · Real-Time Communication · SDK · Self-hosted / On-premise · AI Agents / Chatbots · Contact Center
+
+## MirrorFly Messages API on APIs.io
+
+Everything profiled for MirrorFly Messages API is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/mirrorfly-messages-api/](https://apis.io/providers/mirrorfly-messages-api/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [MirrorFly Chat Platform API](https://apis.io/apis/mirrorfly-messages-api/mirrorfly-chat-platform-api/) — REST/HTTP API for chat and messaging (User and Admin APIs) with JSON payloads. Production base URL is tenant-specific; a public preprod sandbox is available…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Mirrorfly Messages Api Authentication](https://apis.io/security/mirrorfly-messages-api/mirrorfly-messages-api-authentication/)
+- [Mirrorfly Messages Api Domain Security](https://apis.io/security/mirrorfly-messages-api/mirrorfly-messages-api-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.mirrorfly.com/)
+- [Documentation](https://www.mirrorfly.com/docs/platformapi/overview/)
+- [Getting started](https://www.mirrorfly.com/docs/platformapi/adminapis/get-started/)
+- [API reference](https://www.mirrorfly.com/docs/platformapi/userapis/getstarted/login/)
+- [Pricing](https://www.mirrorfly.com/pricing.php)
+- [Sign up](https://www.mirrorfly.com/contact-sales.php)
+- [Support](https://console.mirrorfly.com/)
+- [Changelog](https://www.mirrorfly.com/docs/platformapi/api-changelog/)
+- [Blog](https://www.mirrorfly.com/blog/)
+- [Compliance](https://www.mirrorfly.com/chat-security.php)
+- [Terms of service](https://www.mirrorfly.com/terms-and-conditions.php)
+- [Privacy policy](https://www.mirrorfly.com/privacy-policy.php)
+- [GitHub](https://github.com/MirrorFly)
+
+## API Evangelist rating
+
+**Kin Score 37.7** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 21.1 |
+| Developer ergonomics | 71.4 |
+| Access clarity | 52.6 |
+
+**Agent readiness 8.3** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | documented (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | yes |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 25.0** — Telecommunications
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/mirrorfly-messages-api/](https://apis.io/providers/mirrorfly-messages-api/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for MirrorFly Messages API: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/mirrorfly-messages-api/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
